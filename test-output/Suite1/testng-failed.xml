@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <parameter name="url" value="https://www.guru99.com/"/>
+  <test name="hello">
+    <parameter name="url" value="https://www.guru99.com/"/>
+    <classes>
+      <class name="org.fresh.demo.TestClass"/>
+    </classes>
+  </test> <!-- hello -->
+  <test name="hello(failed)">
+    <parameter name="url" value="https://www.guru99.com/"/>
+    <classes>
+      <class name="org.fresh.demo.TestClass">
+        <methods>
+          <include name="setProperty" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- org.fresh.demo.TestClass -->
+    </classes>
+  </test> <!-- hello(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
